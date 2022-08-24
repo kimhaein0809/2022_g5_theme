@@ -36,11 +36,12 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
         <div id="logo">
             <a href="<?php echo G5_URL ?>"><img src="<?php echo G5_THEME_IMG_URL ?>/logo.svg" alt="<?php echo $config['cf_title']; ?>"></a>
         </div>
-		 <nav id="gnb">
-
+	
+		<nav id="gnb">
+			<h2>메인메뉴</h2>
 			<div class="gnb_wrap">
 				<ul id="gnb_1dul">
-			
+					
 					<?php
 					$menu_datas = get_menu_db(0, true);
 					$gnb_zindex = 999; // gnb_1dli z-index 값 설정용
@@ -51,24 +52,26 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
 					?>
 					<li class="gnb_1dli <?php echo $add_class; ?>" style="z-index:<?php echo $gnb_zindex--; ?>">
 						<a href="<?php echo $row['me_link']; ?>" target="_<?php echo $row['me_target']; ?>" class="gnb_1da"><?php echo $row['me_name'] ?></a>
+						
 					</li>
 					<?php
 					$i++;
 					}   //end foreach $row
+
 					if ($i == 0) {  ?>
 						<li class="gnb_empty">메뉴 준비 중입니다.<?php if ($is_admin) { ?> <a href="<?php echo G5_ADMIN_URL; ?>/menu_list.php">관리자모드 &gt; 환경설정 &gt; 메뉴설정</a>에서 설정하실 수 있습니다.<?php } ?></li>
 					<?php } ?>
 				</ul>
+				
+				
 			</div>
-		</nav>
+    	</nav>
         
-
-        </div>
         
     </div>
     
-   
     
+
 </div>
 <!-- } 상단 끝 -->
 
@@ -77,7 +80,15 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
 
 <!-- 콘텐츠 시작 { -->
 <div id="wrapper">
-    <div id="container_wr">
+    <div id="container_wr"  <?php if (defined("_INDEX_")) { ?> style="width:100%" <?php } ?>>
    
     <div id="container">
-        <?php if (!defined("_INDEX_")) { ?><h2 id="container_title"><span title="<?php echo get_text($g5['title']); ?>"><?php echo get_head_title($g5['title']); ?></span></h2><?php }
+        <?php if (!defined("_INDEX_")) { ?>
+			<h2 id="container_title">
+				<span title="<?php echo get_text($g5['title']); ?>">
+					<?php echo get_head_title($g5['title']); ?>
+				</span>
+			</h2>
+		<?php } ?>
+
+		

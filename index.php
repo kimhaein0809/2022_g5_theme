@@ -14,8 +14,24 @@ if(G5_COMMUNITY_USE === false) {
 
 include_once(G5_THEME_PATH.'/head.php');
 ?>
-<h3>dfdf</h3>
+<style>
+    .visual{background: skyblue;height: 200px;}
+</style>
+<div class="visual">
+    test
+</div>
 
+<h2>test</h2>
+
+
+<?php
+echo G5_THEME_PATH;
+echo "<br>";
+echo G5_THEME_IMG_URL."<BR>";
+echo G5_THEME_CSS_URL."<BR>";
+echo G5_THEME_JS_URL."<BR>";
+echo G5_BBS_URL."<BR>";
+?>
 
 <?php
 include_once(G5_THEME_PATH.'/tail.php');
