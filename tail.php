@@ -31,13 +31,13 @@ if(G5_COMMUNITY_USE === false) {
             </div>
             <div id="ft_company" class="ft_cnt">
                 <h2>고객센터 1599-9186 (평일 오전 9시 ~ 오후 6시)</h2>
-                    <ul>
+                <ul>
                     <li>대표이사 사장 김대환</li>
                     <li>서울 중구 세종대로 67</li>
                     <li>대표전화 1588-8700</li>
                     <li>사업자등록번호 202-81-45602</li>
                 </ul>
-                <ul>
+                <ul class="ft2">
                     <li>통신판매업 신고번호 2009-서울중구-1449</li>
                     <li>monimo@samsung.com</li>
                 </ul>
