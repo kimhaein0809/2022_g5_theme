@@ -21,17 +21,20 @@ include_once(G5_THEME_PATH.'/head.php');
     test
 </div>
 
-<h2>test</h2>
 
-
-<?php
-echo G5_THEME_PATH;
-echo "<br>";
-echo G5_THEME_IMG_URL."<BR>";
-echo G5_THEME_CSS_URL."<BR>";
-echo G5_THEME_JS_URL."<BR>";
-echo G5_BBS_URL."<BR>";
-?>
+            <?php
+                // 이 함수가 바로 최신글을 추출하는 역할을 합니다.
+                // 사용방법 : latest(스킨, 게시판아이디, 출력라인, 글자수);
+                // 테마의 스킨을 사용하려면 theme/basic 과 같이 지정
+                echo latest('theme/basic', 'notice', 3, 30);
+            ?> 
+ 
+            <?php
+                // 이 함수가 바로 최신글을 추출하는 역할을 합니다.
+                // 사용방법 : latest(스킨, 게시판아이디, 출력라인, 글자수);
+                // 테마의 스킨을 사용하려면 theme/basic 과 같이 지정
+                echo latest('theme/basic', 'qa', 3, 30);
+            ?> 
 
 <?php
 include_once(G5_THEME_PATH.'/tail.php');
