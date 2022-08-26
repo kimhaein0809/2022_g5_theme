@@ -137,9 +137,11 @@ border:1px solid #558ab7 !important;
   height:auto !important;
   font-size:1em;width:100%;zoom:1;
 }
+
 #container_title {
-  font-size:26px;margin:0 auto;font-weight:bold;
-  padding: 50px 0;
+  font-size:1.333em;margin:0 auto;font-weight:bold;
+  height: 50px;display: flex;justify-content: center;
+  align-items: center;
 }
 #container_title span {margin:0 auto 10px;display:block;line-height:30px}
 

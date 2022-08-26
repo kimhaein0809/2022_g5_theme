@@ -77,12 +77,50 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
 
 
 <hr>
-
+<?php if (!defined("_INDEX_")){ ?>
+	<style>
+		.visual{
+			Height:200px;background: pink;
+			display: flex;justify-content: center;align-items: center;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-attachment: fixed;
+			color:white;
+			text-align: center;
+		}
+		.visual h2{font-size:2em}
+		.subTopBg_01{
+			background-image: url(<? echo G5_THEME_IMG_URL?>/pc01.jpg);
+		}
+		.subTopBg_02{background-image: url(<? echo G5_THEME_IMG_URL?>/pc02.jpg);}
+		.subTopBg_03{background-image: url(<? echo G5_THEME_IMG_URL?>/pc03.jpg);}
+		.subTopBg_04{background-image: url(<? echo G5_THEME_IMG_URL?>/pc01.jpg);}
+	</style>
 <!-- 콘텐츠 시작 { -->
-<div id="wrapper">
+		<div class="visual" id="page_title">
+			<div class="txtWrap">
+				<h2 class="loc1D"></h2>
+				<p class="txt">항상 저희 홈페이지를 찾아주셔서 감사합니다</p>
+			</div>
+   		</div>
+		   <script>
+			   window.onload = function(){
+				   console.log("111"+$(".loc1D").html())
+				   if($(".loc1D").html() == "모니모 소개"){
+					   $(".txtWrap>.txt").html("안녕하세요")
+					}
+					if($(".loc1D").html() == "공지사항"){
+						$(".txtWrap>.txt").html("안녕하세요.공지사항입니다.")
+					}
+				}
+			</script>
+		<?}?>
+	
     <div id="container_wr"  <?php if (defined("_INDEX_")) { ?> style="width:100%" <?php } ?>>
    
     <div id="container">
+		
         <?php if (!defined("_INDEX_")) { ?>
 			<h2 id="container_title">
 				<span title="<?php echo get_text($g5['title']); ?>">
