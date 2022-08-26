@@ -80,7 +80,7 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
 <?php if (!defined("_INDEX_")){ ?>
 	<style>
 		.visual{
-			Height:200px;background: pink;
+			Height:200px;
 			display: flex;justify-content: center;align-items: center;
 			background-position: center;
 			background-repeat: no-repeat;
