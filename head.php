@@ -103,18 +103,31 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
 				<h2 class="loc1D"></h2>
 				<p class="txt">항상 저희 홈페이지를 찾아주셔서 감사합니다</p>
 			</div>
-   		</div>
-		   <script>
-			   window.onload = function(){
-				   console.log("111"+$(".loc1D").html())
-				   if($(".loc1D").html() == "모니모 소개"){
-					   $(".txtWrap>.txt").html("안녕하세요")
-					}
-					if($(".loc1D").html() == "공지사항"){
-						$(".txtWrap>.txt").html("안녕하세요.공지사항입니다.")
-					}
+		</div>
+
+		<!-- **visual script  -->
+		<!-- sub title만. main title은 X -->
+
+		<script>  
+			window.onload = function(){
+				console.log("111"+$(".loc1D").html())
+				if($(".loc1D").html() == "모니모 소개"){
+					$(".txtWrap > .txt").html("모니모소개입니다")
 				}
-			</script>
+				if($(".loc1D").html() == "공지사항"){
+					$(".txtWrap > .txt").html("공지사항입니다")
+				}
+				if($(".loc1D").html() == "고객센터"){
+					$(".txtWrap > .txt").html("고객센터입니다")
+				}
+				if($(".loc1D").html() == "공동인증서"){
+					$(".txtWrap > .txt").html("공동인증서입니다")
+				}
+
+			}
+		</script>
+
+
 		<?}?>
 	
     <div id="container_wr"  <?php if (defined("_INDEX_")) { ?> style="width:100%" <?php } ?>>
